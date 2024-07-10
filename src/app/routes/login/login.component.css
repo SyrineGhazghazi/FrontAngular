@@ -1,0 +1,93 @@
+.login-form {
+    max-width: 500px; 
+    margin: 0 auto;
+    padding: 40px; 
+    background-color: #f7f7f7;
+    border-radius: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.login-panel {
+    margin-bottom: 30px; 
+}
+
+.ui-grid {
+    margin: 0;
+    padding: 0;
+}
+
+.form-row {
+    margin-bottom: 30px; 
+}
+
+.form-field {
+    width: 100%;
+    position: relative;
+    height: 70px; 
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    height: 100%;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+}
+
+.alert {
+    margin-top: 5px;
+    color: #d9534f;
+    font-size: 14px; 
+}
+
+/* Float Label Styling */
+p-floatLabel .form-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px; 
+    transform: translateY(-50%);
+    font-size: 16px; 
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+p-floatLabel .form-field input:focus + label,
+p-floatLabel .form-field input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px; 
+    font-size: 14px;
+    color: #007bff;
+}
+
+/* Button Styling */
+.button-row {
+    text-align: right;
+}
+
+.submit-button {
+    padding: 15px 25px; 
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px; 
+    color: #fff;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}

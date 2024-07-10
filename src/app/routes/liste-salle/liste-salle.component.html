@@ -1,0 +1,27 @@
+<p-table [value]="salles" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th>Name </th>
+            <th>capacity</th>
+            <th>equipments</th>
+            <th>availability</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-salle let-columns="columns">
+        <tr>
+            <td>
+                {{salle.name}}
+            </td>
+            <td>
+                {{salle.capacity}}
+            </td>
+            <td>
+                {{salle.equipments}}
+            </td>
+            <td>
+                {{salle.availability}}
+            </td>
+        
+        </tr>
+    </ng-template>
+</p-table>
