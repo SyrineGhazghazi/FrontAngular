@@ -1,12 +1,12 @@
 <form (ngSubmit)="onSubmit()" class="reservation-form">
     <div class="form-group">
-      <label for="userSelect">Select User:</label>
+      <label for="userSelect">Sélectionner un utilisateur : </label>
       <p-dropdown 
         [options]="users" 
         [(ngModel)]="reservationData.userId" 
         optionLabel="username" 
         optionValue="_id"
-        placeholder="Select a User" 
+        placeholder="Sélectionner un utilisateur " 
         [filter]="true"
         filterBy="username"
         required 
@@ -15,13 +15,13 @@
     </div>
   
     <div class="form-group">
-      <label for="roomSelect">Select Room:</label>
+      <label for="roomSelect">Sélectionner une salle:</label>
       <p-dropdown 
         [options]="rooms" 
         [(ngModel)]="reservationData.roomId" 
         optionLabel="name" 
         optionValue="_id"
-        placeholder="Select a Room" 
+        placeholder="Sélectionner une salle" 
         [filter]="true"
         filterBy="name" 
         name="roomSelect"
@@ -30,12 +30,12 @@
     </div>
   
     <div class="form-group">
-      <label for="startTime">Start Time:</label>
+      <label for="startTime">Date début : </label>
       <input type="datetime-local" id="startTime" name="startTime" [(ngModel)]="reservationData.startTime" required>
     </div>
   
     <div class="form-group">
-      <label for="endTime">End Time:</label>
+      <label for="endTime">Date fin</label>
       <input type="datetime-local" id="endTime" name="endTime" [(ngModel)]="reservationData.endTime" required>
     </div>
   

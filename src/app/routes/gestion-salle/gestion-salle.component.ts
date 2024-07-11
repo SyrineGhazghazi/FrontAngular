@@ -11,30 +11,26 @@ export class GestionSalleComponent {
  
   {
       id: 1012,
-      name: 'Kiley Caldarera',
+      name: 'salle de dance',
       country: {
-          name: 'Serbia',
+          name: '21/03/2023',
           code: 'rs'
       },
-      company: 'Feiner Bros',
+      company: '10/03/2025',
       date: '2015-10-20',
       status: 'unqualified',
       verified: false,
       activity: 80,
-      representative: {
-          name: 'Onyama Limba',
-          image: 'onyamalimba.png'
-      },
-      balance: 92734
+   
   },
   {
       id: 1013,
-      name: 'Graciela Ruta',
+      name: 'salle de réunion',
       country: {
-          name: 'Chile',
+          name: '29/03/2023',
           code: 'cl'
       },
-      company: 'Buckley Miller & Wright',
+      company: '10/09/2028',
       date: '2016-07-25',
       status: 'negotiation',
       verified: false,
@@ -47,12 +43,12 @@ export class GestionSalleComponent {
   },
   {
       id: 1014,
-      name: 'Cammy Albares',
+      name: 'salle des fetes',
       country: {
-          name: 'Philippines',
+          name: '28/02/2021',
           code: 'ph'
       },
-      company: 'Rousseaux, Michael Esq',
+      company: '02/03/2026',
       date: '2019-06-25',
       status: 'new',
       verified: true,

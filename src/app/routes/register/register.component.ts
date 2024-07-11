@@ -12,6 +12,13 @@ export class RegisterComponent {
 
 
   inscriptionForm:FormGroup;
+    /**
+   * Initializes the inscription form with username, password, and email fields.
+   *
+   * @param {FormBuilder} fb - FormBuilder instance for creating the form
+   * @param {LoginService} login - LoginService instance for authentication
+   * @param {Router} router - Router instance for navigation
+   */
   constructor (private fb: FormBuilder,private login:LoginService,private router:Router) 
   {
     this.inscriptionForm = this.fb.group({
@@ -20,6 +27,7 @@ export class RegisterComponent {
       email: ['',Validators.required]
     })
   }
+  
   onSubmit() {
    if(this.inscriptionForm.invalid){
     this.inscriptionForm.markAllAsTouched();

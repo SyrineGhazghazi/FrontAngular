@@ -31,9 +31,10 @@
     >
         <ng-template pTemplate="header">
             <tr>
-                <th style="width:25%">Room Name</th>
-                <th style="width:25%">Start Time</th>
-                <th style="width:25%">End Time</th>
+                <th style="width:25%">Nom de salle</th>
+                <th style="width:25%">Date début </th>
+                <th style="width:25%">Date fin </th>
+                <th style="width:25%">Action</th>
           
             </tr>
         </ng-template>
@@ -42,7 +43,6 @@
                 <td>{{ customer.name }}</td>
                 <td>{{ customer.country.name }}</td>
                 <td>{{ customer.company }}</td>
-                <td>{{ customer.representative.name }}</td>
                 <td>
                     <p-button pRipple type="button" icon="pi pi-pencil" label="" outlined="true"
          [style]="{'margin-right.px': '10'}"
