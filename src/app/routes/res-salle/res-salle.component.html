@@ -1,1 +1,47 @@
-<p>res-salle works!</p>
+<form (ngSubmit)="onSubmit()" class="reservation-form">
+    <div class="form-group">
+      <label for="userSelect">Select User:</label>
+      <p-dropdown 
+        [options]="users" 
+        [(ngModel)]="reservationData.userId" 
+        optionLabel="username" 
+        optionValue="_id"
+        placeholder="Select a User" 
+        [filter]="true"
+        filterBy="username"
+        required 
+        name="userSelect" >
+      </p-dropdown>
+    </div>
+  
+    <div class="form-group">
+      <label for="roomSelect">Select Room:</label>
+      <p-dropdown 
+        [options]="rooms" 
+        [(ngModel)]="reservationData.roomId" 
+        optionLabel="name" 
+        optionValue="_id"
+        placeholder="Select a Room" 
+        [filter]="true"
+        filterBy="name" 
+        name="roomSelect"
+        required>
+      </p-dropdown>
+    </div>
+  
+    <div class="form-group">
+      <label for="startTime">Start Time:</label>
+      <input type="datetime-local" id="startTime" name="startTime" [(ngModel)]="reservationData.startTime" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="endTime">End Time:</label>
+      <input type="datetime-local" id="endTime" name="endTime" [(ngModel)]="reservationData.endTime" required>
+    </div>
+  
+    <div class="form-group">
+      <button pButton pRipple label="Create Reservation" class="p-button-success">
+      </button>
+    </div>
+  </form>
+  

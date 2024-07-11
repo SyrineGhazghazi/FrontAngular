@@ -15,13 +15,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { RegisterComponent } from './routes/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ListeSalleComponent } from './routes/liste-salle/liste-salle.component';
 import { ResSalleComponent } from './routes/res-salle/res-salle.component';
 import { GestionSalleComponent } from './routes/gestion-salle/gestion-salle.component';
 import { CalendrierComponent } from './routes/calendrier/calendrier.component';
 import { CalendarModule } from 'primeng/calendar';
 import { TableModule } from 'primeng/table';
+import { Interceptor } from '../interceptor';
+import { DropdownModule } from 'primeng/dropdown';
+import { MenubarModule } from 'primeng/menubar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +50,11 @@ import { TableModule } from 'primeng/table';
     FloatLabelModule,
     HttpClientModule,
     CalendarModule,
-    TableModule
+    TableModule,
+    DropdownModule,
+    MenubarModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:Interceptor, multi:true}],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

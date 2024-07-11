@@ -12,13 +12,14 @@ export class LoginService {
   constructor(private _http:HttpClient) { }
 
   login(data:User):Observable<any>{
-    
     return this._http.post<any>(`${environment.API}/auth/login`,data)
   }
   register(data:User):Observable<any>{
 
     return this._http.post<any>(`${environment.API}/users/createUser`,data)
   }
-
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token');
+  }
 
 }

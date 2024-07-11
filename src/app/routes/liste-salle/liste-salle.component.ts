@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Room } from '../../shared/models/room';
+import { RoomService } from '../../services/Rooms/room.service';
 
 @Component({
   selector: 'app-liste-salle',
@@ -8,8 +9,12 @@ import { Room } from '../../shared/models/room';
 })
 export class ListeSalleComponent {
 salles!: Room[];
-ngOnInit(){
 
+constructor(private salleService:RoomService){}
+ngOnInit(){
+this.salleService.GetAllRooms().subscribe(rooms=>{
+  this.salles = rooms
+})
 }
 
 }
